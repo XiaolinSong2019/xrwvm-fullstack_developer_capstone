@@ -1,91 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Best Cars Dealership</title>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us - Dealerships</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Dealerships</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="p-5 mb-4 bg-light rounded-3 text-center">
-            <h1 class="display-5 fw-bold">About Best Cars Dealership</h1>
-            <p class="lead">Welcome to Best Cars dealership, home to the finest vehicles across the United States. We pride ourselves on providing customer-first service, transparent pricing, and comprehensive vehicle history.</p>
-        </div>
+  <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light"
+    style="background-color: darkturquoise; min-height: 1in;"
+  >
+    <div class="container-fluid">
 
-        <h2 class="text-center mb-4">Meet Our Leadership Team</h2>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- Team Member 1 -->
-            <div class="col">
-                <div class="card h-100 shadow-sm text-center p-3">
-                    <img src="/static/person.png" class="card-img-top rounded-circle mx-auto mt-2" alt="Sarah Johnson" style="width: 130px; height: 130px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">Sarah Johnson</h5>
-                        <p class="text-primary fw-bold">Chief Executive Officer</p>
-                        <p class="card-text">Sarah has over 18 years of experience in automotive retail, pioneering customer satisfaction and transparent vehicle trading across the country.</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0">
-                        <a href="mailto:sarah.johnson@bestcars.com" class="text-decoration-none">sarah.johnson@bestcars.com</a>
-                    </div>
-                </div>
-            </div>
+      <h2 style="padding-right: 5%;">Dealerships</h2>
 
-            <!-- Team Member 2 -->
-            <div class="col">
-                <div class="card h-100 shadow-sm text-center p-3">
-                    <img src="/static/person.png" class="card-img-top rounded-circle mx-auto mt-2" alt="Marcus Chen" style="width: 130px; height: 130px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">Marcus Chen</h5>
-                        <p class="text-primary fw-bold">Head of Sales & Operations</p>
-                        <p class="card-text">Marcus oversees our multi-state dealership network, ensuring that our inventory meets rigorous mechanical and safety inspection standards.</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0">
-                        <a href="mailto:marcus.chen@bestcars.com" class="text-decoration-none">marcus.chen@bestcars.com</a>
-                    </div>
-                </div>
-            </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Team Member 3 -->
-            <div class="col">
-                <div class="card h-100 shadow-sm text-center p-3">
-                    <img src="/static/person.png" class="card-img-top rounded-circle mx-auto mt-2" alt="Elena Rodriguez" style="width: 130px; height: 130px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">Elena Rodriguez</h5>
-                        <p class="text-primary fw-bold">Director of Customer Experience</p>
-                        <p class="card-text">Elena is dedicated to assisting clients throughout the purchase journey, warranty setups, and post-sale automotive maintenance support.</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0">
-                        <a href="mailto:elena.rodriguez@bestcars.com" class="text-decoration-none">elena.rodriguez@bestcars.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarText">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="font-size: larger;"
+              aria-current="page"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              style="font-size: larger;"
+              href="/about"
+            >
+              About Us
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="font-size: larger;"
+              href="/contact"
+            >
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
     </div>
+  </nav>
+
+
+  <!-- About Us Section -->
+  <div
+    class="card"
+    style="width: 90%; margin: auto; margin-top: 5%; padding: 25px;"
+  >
+
+    <div class="banner" name="about-header">
+
+      <h1>About Us</h1>
+
+      <p
+        style="
+          max-width: 900px;
+          text-align: center;
+          font-size: 18px;
+          line-height: 1.6;
+        "
+      >
+        Welcome to our dealership review platform. We are dedicated to
+        connecting customers with trusted automobile dealerships and helping
+        people make informed vehicle-buying decisions. Our platform allows
+        customers to explore dealerships, read reviews, and share their own
+        experiences.
+      </p>
+
+      <p
+        style="
+          max-width: 900px;
+          text-align: center;
+          font-size: 18px;
+          line-height: 1.6;
+        "
+      >
+        Our team works together to provide accurate dealership information,
+        excellent customer support, and a simple online experience for
+        customers searching for their next vehicle.
+      </p>
+
+    </div>
+
+
+    <!-- Team Members -->
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+      "
+    >
+
+      <!-- Team Member 1 -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 260px;
+          margin: 2%;
+        "
+      >
+
+        <img
+          class="card-img-top"
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80"
+          alt="Alex Johnson"
+          style="
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+          "
+        >
+
+        <div class="card-body">
+
+          <p class="title">
+            Alex Johnson
+          </p>
+
+          <h5 style="text-align: center;">
+            General Manager
+          </h5>
+
+          <p class="card-text">
+            Alex oversees daily dealership operations and works closely with
+            every department to provide customers with a professional and
+            reliable experience. He has extensive experience in automotive
+            sales and dealership management.
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            alex.johnson@autohub.com
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- Team Member 2 -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 260px;
+          margin: 2%;
+        "
+      >
+
+        <img
+          class="card-img-top"
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
+          alt="Emily Davis"
+          style="
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+          "
+        >
+
+        <div class="card-body">
+
+          <p class="title">
+            Emily Davis
+          </p>
+
+          <h5 style="text-align: center;">
+            Customer Relations Manager
+          </h5>
+
+          <p class="card-text">
+            Emily helps customers throughout their dealership experience and
+            makes sure their questions and concerns are handled quickly. She
+            focuses on customer satisfaction and building long-term
+            relationships.
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            emily.davis@autohub.com
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- Team Member 3 -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 260px;
+          margin: 2%;
+        "
+      >
+
+        <img
+          class="card-img-top"
+          src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80"
+          alt="Michael Lee"
+          style="
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+          "
+        >
+
+        <div class="card-body">
+
+          <p class="title">
+            Michael Lee
+          </p>
+
+          <h5 style="text-align: center;">
+            Sales Manager
+          </h5>
+
+          <p class="card-text">
+            Michael leads the dealership sales team and helps customers find
+            vehicles that match their needs, preferences, and budgets. He
+            specializes in creating a straightforward and comfortable buying
+            experience.
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            michael.lee@autohub.com
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>
