@@ -1,118 +1,158 @@
 import React, { useState } from "react";
 import "./Register.css";
+import Header from "../Header/Header";
 
 const Register = () => {
   const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const gohome = () => {
-    window.location.href = window.location.origin;
-  };
+  const register_url = window.location.origin + "/djangoapp/register";
 
   const register = async (e) => {
     e.preventDefault();
-    let register_url = window.location.origin + "/djangoapp/register";
-    
-    const res = await fetch(register_url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            "userName": userName,
-            "password": password,
-            "firstName": firstName,
-            "lastName": lastName,
-            "email": email
-        }),
+
+    const response = await fetch(register_url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        userName: userName,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      }),
     });
 
-    const json = await res.json();
-    if (json.status) {
-        sessionStorage.setItem('username', json.userName);
-        window.location.href = window.location.origin;
-    } else if (json.error === "Already Registered") {
-      alert("The user with same username is already registered");
-      window.location.href = window.location.origin;
+    const json = await response.json();
+
+    if (json.status === "Authenticated") {
+      sessionStorage.setItem("username", json.userName);
+      window.location.href = "/";
+    } else {
+      alert("Registration failed. Please try again.");
     }
   };
 
   return (
-    <div className="register_container" style={{ width: "50%", margin: "auto", marginTop: "5%" }}>
-      <div className="header" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-        <span className="text" style={{ flexGrow: "1", fontSize: "24px", fontWeight: "bold" }}>Sign Up</span>
-        <div style={{ display: "flex", flexDirection: "row", justifySelf: "end", alignSelf: "start" }}>
-          <a href="/" onClick={(e) => { e.preventDefault(); gohome(); }} style={{ justifyContent: "space-between", alignItems: "flex-end" }}>
-            X
-          </a>
-        </div>
-      </div>
-      <hr />
+    <div>
+      <Header />
 
-      <form onSubmit={register}>
+      <form className="register_container" onSubmit={register}>
+
+        <div className="header">
+          Sign Up
+        </div>
+
         <div className="inputs">
-          <div className="input" style={{ marginBottom: "15px" }}>
-            <input 
-              type="text" 
-              name="userName" 
-              placeholder="Username" 
-              className="input_field" 
-              onChange={(e) => setUserName(e.target.value)} 
-              required 
+
+          {/* Username */}
+          <div className="input">
+            <label className="input_field">
+              Username
+            </label>
+
+            <input
+              type="text"
+              className="input_field"
+              name="username"
+              placeholder="Username"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              required
             />
           </div>
-          
-          <div className="input" style={{ marginBottom: "15px" }}>
-            <input 
-              type="text" 
-              name="firstName" 
-              placeholder="First Name" 
-              className="input_field" 
-              onChange={(e) => setFirstName(e.target.value)} 
-              required 
+
+
+          {/* First Name */}
+          <div className="input">
+            <label className="input_field">
+              First Name
+            </label>
+
+            <input
+              type="text"
+              className="input_field"
+              name="firstName"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
             />
           </div>
-          
-          <div className="input" style={{ marginBottom: "15px" }}>
-            <input 
-              type="text" 
-              name="lastName" 
-              placeholder="Last Name" 
-              className="input_field" 
-              onChange={(e) => setLastName(e.target.value)} 
-              required 
+
+
+          {/* Last Name */}
+          <div className="input">
+            <label className="input_field">
+              Last Name
+            </label>
+
+            <input
+              type="text"
+              className="input_field"
+              name="lastName"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </div>
-          
-          <div className="input" style={{ marginBottom: "15px" }}>
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Email" 
-              className="input_field" 
-              onChange={(e) => setEmail(e.target.value)} 
-              required 
+
+
+          {/* Email */}
+          <div className="input">
+            <label className="input_field">
+              Email
+            </label>
+
+            <input
+              type="email"
+              className="input_field"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
-          
-          <div className="input" style={{ marginBottom: "15px" }}>
-            <input 
-              name="psw" 
-              type="password" 
-              placeholder="Password" 
-              className="input_field" 
-              onChange={(e) => setPassword(e.target.value)} 
-              required 
+
+
+          {/* Password */}
+          <div className="input">
+            <label className="input_field">
+              Password
+            </label>
+
+            <input
+              type="password"
+              className="input_field"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
+
         </div>
-        
-        <div className="submit_panel" style={{ marginTop: "20px" }}>
-          <button className="submit" type="submit">Register</button>
+
+
+        {/* Register Button */}
+        <div className="submit_panel">
+          <button
+            className="submit"
+            type="submit"
+          >
+            Register
+          </button>
         </div>
+
       </form>
     </div>
   );
