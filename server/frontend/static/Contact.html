@@ -1,81 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Best Cars Dealership</title>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us - Best Cars</title>
+
+  <!-- CSS links -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Dealerships</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/contact">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="p-5 mb-4 bg-light rounded-3 text-center">
-            <h1 class="display-5 fw-bold">Contact Us</h1>
-            <p class="lead">Have questions or need assistance? Reach out to our dealership support team.</p>
-        </div>
+  <!-- Navigation Bar -->
+  <nav
+    class="navbar navbar-expand-lg navbar-light"
+    style="background-color: darkturquoise; min-height: 1in;"
+  >
+    <div class="container-fluid">
 
-        <div class="row align-items-center g-4">
-            <!-- Contact Image -->
-            <div class="col-md-6 text-center">
-                <img src="/static/contactus.png" alt="Contact Us" class="img-fluid rounded shadow-sm" style="max-height: 380px; object-fit: contain;">
-            </div>
+      <h2 style="padding-right: 5%;">Dealerships</h2>
 
-            <!-- Contact Information Card -->
-            <div class="col-md-6">
-                <div class="card shadow-sm border-0 p-4">
-                    <h3 class="card-title text-primary mb-3">Get In Touch</h3>
-                    <p class="card-text text-muted mb-4">
-                        Whether you are shopping for your next car, exploring financing options, or booking a maintenance service, we are here to help.
-                    </p>
-                    
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-3">
-                            <strong>Address:</strong><br>
-                            100 Dealership Way, Suite 400<br>
-                            Chicago, IL 60601
-                        </li>
-                        <li class="mb-3">
-                            <strong>Phone:</strong><br>
-                            <a href="tel:+18005550199" class="text-decoration-none">+1 (800) 555-0199</a>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Email Support:</strong><br>
-                            <a href="mailto:support@bestcars.com" class="text-decoration-none">support@bestcars.com</a>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Business Hours:</strong><br>
-                            Monday – Friday: 8:00 AM – 7:00 PM<br>
-                            Saturday: 9:00 AM – 5:00 PM<br>
-                            Sunday: Closed
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="font-size: larger;"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="font-size: larger;"
+              href="/about"
+            >
+              About Us
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              style="font-size: larger;"
+              aria-current="page"
+              href="/contact"
+            >
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
     </div>
+  </nav>
+
+
+  <!-- Contact Us Card -->
+  <div
+    class="card"
+    style="
+      width: 85%;
+      margin: auto;
+      margin-top: 5%;
+      padding: 30px;
+    "
+  >
+
+    <div class="banner">
+
+      <h1>Contact Us</h1>
+
+      <p
+        style="
+          font-size: 18px;
+          max-width: 850px;
+          text-align: center;
+          line-height: 1.6;
+        "
+      >
+        Have questions about a dealership, vehicle, or customer review?
+        Our Best Cars team is here to help. Contact us by phone, email,
+        or visit our office during normal business hours.
+      </p>
+
+    </div>
+
+
+    <!-- Contact Image -->
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      "
+    >
+
+      <img
+        src="/static/contactus.png"
+        alt="Best Cars customer support team"
+        style="
+          width: 55%;
+          max-width: 600px;
+          border-radius: 10px;
+        "
+      >
+
+    </div>
+
+
+    <!-- Contact Details -->
+    <div
+      class="row"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      "
+    >
+
+      <!-- Address -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 250px;
+          padding: 20px;
+          text-align: center;
+        "
+      >
+
+        <h3>Visit Us</h3>
+
+        <p class="details">
+          Best Cars Dealership
+        </p>
+
+        <p>
+          1250 Market Street<br>
+          San Francisco, CA 94102<br>
+          United States
+        </p>
+
+      </div>
+
+
+      <!-- Phone -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 250px;
+          padding: 20px;
+          text-align: center;
+        "
+      >
+
+        <h3>Call Us</h3>
+
+        <p class="details">
+          Customer Support
+        </p>
+
+        <p>
+          Phone: +1 (415) 555-0147
+        </p>
+
+        <p>
+          Sales: +1 (415) 555-0192
+        </p>
+
+      </div>
+
+
+      <!-- Email -->
+      <div
+        class="card"
+        style="
+          width: 28%;
+          min-width: 250px;
+          padding: 20px;
+          text-align: center;
+        "
+      >
+
+        <h3>Email Us</h3>
+
+        <p class="details">
+          Customer Service
+        </p>
+
+        <p>
+          support@bestcarsdealership.com
+        </p>
+
+        <p>
+          sales@bestcarsdealership.com
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Business Hours -->
+    <div
+      class="card"
+      style="
+        width: 80%;
+        margin: 30px auto;
+        padding: 25px;
+        text-align: center;
+      "
+    >
+
+      <h3>Business Hours</h3>
+
+      <p>
+        <strong>Monday - Friday:</strong>
+        9:00 AM - 6:00 PM
+      </p>
+
+      <p>
+        <strong>Saturday:</strong>
+        10:00 AM - 5:00 PM
+      </p>
+
+      <p>
+        <strong>Sunday:</strong>
+        Closed
+      </p>
+
+    </div>
+
+
+    <!-- Additional Information -->
+    <div
+      style="
+        text-align: center;
+        margin: 20px;
+      "
+    >
+
+      <h3>We're Here to Help</h3>
+
+      <p>
+        Whether you are searching for a dealership, checking customer
+        reviews, or sharing your own vehicle-buying experience, our team
+        is happy to assist you.
+      </p>
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>
